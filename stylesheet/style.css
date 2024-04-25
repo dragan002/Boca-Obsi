@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    min-width: 21em;
+}
+/* === Header === */
+
+.header {
+    display: grid;
+    grid-template-areas: 
+    "menu search logo user cart";
+    margin-top: 1em;
+    align-items: center;
+    /* It is 1em, because I didn't insert mobile icons(signal, battery etc) */
+}
+
+
+.header__menu {
+    grid-area: menu;
+    justify-self: center;
+}
+
+.header__logo {
+    grid-area: logo;
+    justify-self: center;
+}
+.header__logo img {
+    width: 62px;
+    height: 49px;
+}
+
+.header__nav {
+    display: none;
+    grid-area: nav;
+}
+
+.header__icon-search {
+    grid-area: search;
+}
+
+.header__icon-user {
+    grid-area: user;
+    justify-self: end;
+}
+
+.header__icon-cart {
+    grid-area: cart;
+    justify-self: center;
+}
+
+/* === End ofHeader === */
+
+
+/* ==== Product ====  */
+.product__category,
+.product__description,
+.product__purchase-options {
+    background-color: #f6f6f5;
+}
+.product__category {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.product__category-image img  {
+    width: 100%;
+    height: 100%;
+}
+.product__category-arrow {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+    font-size: 10px;
+    color: #4d4d4d;
+}
+.product__category-text span {
+    color: #a9a9a9;
+}
+
+/* section Description */
+.product__description {
+    display: grid;
+    grid-template-columns: calc(10% - 20px) 1fr calc(10% - 20px); /* Adjust the prercentage and pixel values to create space */
+}
+.product__description  > * {
+    grid-column: 2;
+}
+.product__description-title-main {
+    margin: 0;
+}
+
+/* ==== End of Product ====  */
+

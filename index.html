@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Obsi</title>
 </head>
 <body>
     
+<div class="container">
     <!--  HEADER -->
     <header class="header">
-        <div class="header__icon">
+        <div class="header__menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <path d="M1.16663 4.44203C1.16663 4.19219 1.32795 3.95258 1.61512 3.77591C1.90228 3.59925 2.29176 3.5 2.69788 3.5H24.1354C24.5415 3.5 24.931 3.59925 25.2181 3.77591C25.5053 3.95258 25.6666 4.19219 25.6666 4.44203C25.6666 4.69187 25.5053 4.93148 25.2181 5.10814C24.931 5.28481 24.5415 5.38406 24.1354 5.38406H2.69788C2.29176 5.38406 1.90228 5.28481 1.61512 5.10814C1.32795 4.93148 1.16663 4.69187 1.16663 4.44203ZM1.16663 23.558C1.16663 23.3081 1.32795 23.0685 1.61512 22.8919C1.90228 22.7152 2.29176 22.6159 2.69788 22.6159H24.1354C24.5415 22.6159 24.931 22.7152 25.2181 22.8919C25.5053 23.0685 25.6666 23.3081 25.6666 23.558C25.6666 23.8078 25.5053 24.0474 25.2181 24.2241C24.931 24.4008 24.5415 24.5 24.1354 24.5H2.69788C2.29176 24.5 1.90228 24.4008 1.61512 24.2241C1.32795 24.0474 1.16663 23.8078 1.16663 23.558ZM2.69788 13.058C2.29176 13.058 1.90228 13.1572 1.61512 13.3339C1.32795 13.5105 1.16663 13.7502 1.16663 14C1.16663 14.2498 1.32795 14.4894 1.61512 14.6661C1.90228 14.8428 2.29176 14.942 2.69788 14.942H14.9479C15.354 14.942 15.7435 14.8428 16.0306 14.6661C16.3178 14.4894 16.4791 14.2498 16.4791 14C16.4791 13.7502 16.3178 13.5105 16.0306 13.3339C15.7435 13.1572 15.354 13.058 14.9479 13.058H2.69788Z" fill="black"/>
             </svg>
         </div>
         <div class="header__logo">
-            <img src="images/logoObsi.png" style="width: 40px;" alt="Logo">
+            <img src="images/logoObsi.png" alt="Logo">
         </div>
         <nav class="header__nav">
             <ul class="header__nav-list">
@@ -27,24 +33,22 @@
                 <li class="header__nav-item"><a href="" class="header__nav-link">Tutorial</a></li>
             </ul>
         </nav>
-        <div class="header__icons">
-            <a href="" class="header__icon-link">
+            <a href="" class="header__icon-search">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <path d="M25.6667 25.6667L19 19M12.3334 22.3333C11.0202 22.3333 9.7198 22.0747 8.50654 21.5721C7.29328 21.0696 6.19089 20.333 5.26231 19.4044C4.33372 18.4758 3.59713 17.3734 3.09458 16.1602C2.59203 14.9469 2.33337 13.6466 2.33337 12.3333C2.33337 11.0201 2.59203 9.71976 3.09458 8.5065C3.59713 7.29324 4.33372 6.19085 5.26231 5.26227C6.19089 4.33368 7.29328 3.59709 8.50654 3.09454C9.7198 2.59199 11.0202 2.33333 12.3334 2.33333C14.9855 2.33333 17.5291 3.3869 19.4044 5.26227C21.2798 7.13763 22.3334 9.68117 22.3334 12.3333C22.3334 14.9855 21.2798 17.529 19.4044 19.4044C17.5291 21.2798 14.9855 22.3333 12.3334 22.3333Z" stroke="black" stroke-width="1.5"/>
                 </svg>
             </a>
-            <a href="" class="header__icon-link">
+            <a href="" class="header__icon-user">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                     <path d="M4.66675 24.5172V23.3496C4.66675 19.4804 7.80075 16.3438 11.6667 16.3438H16.3334C20.1994 16.3438 23.3334 19.4804 23.3334 23.3496V24.5172" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
                     <path d="M14.0002 12.841C11.4228 12.841 9.3335 10.7499 9.3335 8.17049C9.3335 5.59105 11.4228 3.5 14.0002 3.5C16.5774 3.5 18.6668 5.59105 18.6668 8.17049C18.6668 10.7499 16.5774 12.841 14.0002 12.841Z" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>
             </a>
-            <a href="" class="header__icon-link">
+            <a href="" class="header__icon-cart">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                     <path d="M14 1.53125C14.9946 1.53125 15.9484 1.93457 16.6517 2.65248C17.3549 3.37039 17.75 4.34409 17.75 5.35938V6.125H10.25V5.35938C10.25 4.34409 10.6451 3.37039 11.3483 2.65248C12.0516 1.93457 13.0054 1.53125 14 1.53125ZM19.25 6.125V5.35938C19.25 3.93798 18.6969 2.5748 17.7123 1.56972C16.7277 0.564647 15.3924 0 14 0C12.6076 0 11.2723 0.564647 10.2877 1.56972C9.30312 2.5748 8.75 3.93798 8.75 5.35938V6.125H3.5V21.4375C3.5 22.2497 3.81607 23.0287 4.37868 23.603C4.94129 24.1773 5.70435 24.5 6.5 24.5H21.5C22.2956 24.5 23.0587 24.1773 23.6213 23.603C24.1839 23.0287 24.5 22.2497 24.5 21.4375V6.125H19.25ZM5 7.65625H23V21.4375C23 21.8436 22.842 22.2331 22.5607 22.5203C22.2794 22.8074 21.8978 22.9688 21.5 22.9688H6.5C6.10218 22.9688 5.72064 22.8074 5.43934 22.5203C5.15804 22.2331 5 21.8436 5 21.4375V7.65625Z" fill="black"/>
                 </svg>
             </a>
-        </div>
     </header>
 
     <main class="product">
@@ -53,16 +57,21 @@
                 <img src="images/product-image-obsi.png" alt="Product Image">
             </div>
             <div class="product__category-arrow">
-                <svg class ="product__category-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0009 5.66948C14.0009 5.53005 13.9482 5.39634 13.8544 5.29775C13.7607 5.19915 13.6335 5.14377 13.5009 5.14377H1.70789L4.85489 1.83596C4.90138 1.78709 4.93826 1.72906 4.96342 1.66519C4.98858 1.60133 5.00152 1.53288 5.00152 1.46376C5.00152 1.39463 4.98858 1.32618 4.96342 1.26232C4.93826 1.19846 4.90138 1.14043 4.85489 1.09155C4.80841 1.04267 4.75322 1.0039 4.69248 0.977446C4.63174 0.950993 4.56664 0.937378 4.50089 0.937378C4.43515 0.937378 4.37005 0.950993 4.30931 0.977446C4.24857 1.0039 4.19338 1.04267 4.14689 1.09155L0.146894 5.29727C0.100331 5.34611 0.0633877 5.40412 0.0381812 5.46799C0.0129748 5.53186 0 5.60033 0 5.66948C0 5.73863 0.0129748 5.8071 0.0381812 5.87097C0.0633877 5.93484 0.100331 5.99285 0.146894 6.04169L4.14689 10.2474C4.19338 10.2963 4.24857 10.3351 4.30931 10.3615C4.37005 10.388 4.43515 10.4016 4.50089 10.4016C4.56664 10.4016 4.63174 10.388 4.69248 10.3615C4.75322 10.3351 4.80841 10.2963 4.85489 10.2474C4.90138 10.1985 4.93826 10.1405 4.96342 10.0766C4.98858 10.0128 5.00152 9.94433 5.00152 9.87521C5.00152 9.80608 4.98858 9.73763 4.96342 9.67377C4.93826 9.60991 4.90138 9.55188 4.85489 9.503L1.70789 6.1952H13.5009C13.6335 6.1952 13.7607 6.13981 13.8544 6.04122C13.9482 5.94263 14.0009 5.80891 14.0009 5.66948Z" fill="#A9A9A9"/>
                 </svg>
-                <p class="product__category-text">ALL PRODUCTS/HAIRCARE/RESTORATIVE HAIR MASK</p>
+                </div>
+           
+                <p class="product__category-text"><span>
+                    ALL PRODUCTS/HAIRCARE/
+                </span>RESTORATIVE HAIR MASK</p>
             </div>
         </section>
         
         <section class="product__description">
             <div class="product__description-title">
-                <h3 class="product__description-title-main">RESTORATIVE HAIR MASK</h3>
+                <h1 class="product__description-title-main">RESTORATIVE HAIR MASK</h1>
                 <h4 class="product__description-title-sub">NUTURISHMENT IN A BOTTLE</h4>
             </div>
             <div class="product__description-text-icons">
@@ -108,18 +117,18 @@
             </div>
         </section>
 
-        <section class="product__ingredients">
-            <div class="product__ingredient">
-                <h4 class="product__ingredient-title">Ingredients</h4>
-                <p class="product__ingredient-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor commodo ullamcorper a lacus vestibulum. Luctus accumsan tortor posuere ac ut.</p>
+        <section class="product__accordions">
+            <div class="product__accordion">
+                <h4 class="product__accordion-title">Ingredients</h4>
+                <p class="product__accordion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor commodo ullamcorper a lacus vestibulum. Luctus accumsan tortor posuere ac ut.</p>
             </div>
-            <div class="product__ingredient">
-                <h4 class="product__ingredient-title">Ingredients</h4>
-                <p class="product__ingredient-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor commodo ullamcorper a lacus vestibulum. Luctus accumsan tortor posuere ac ut.</p>
+            <div class="product__accordion">
+                <h4 class="product__accordion-title">Ingredients</h4>
+                <p class="product__accordion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor commodo ullamcorper a lacus vestibulum. Luctus accumsan tortor posuere ac ut.</p>
             </div>
-            <div class="product__ingredient">
-                <h4 class="product__ingredient-title">Ingredients</h4>
-                <p class="product__ingredient-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor commodo ullamcorper a lacus vestibulum. Luctus accumsan tortor posuere ac ut.</p>
+            <div class="product__accordion">
+                <h4 class="product__accordion-title">Ingredients</h4>
+                <p class="product__accordion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor commodo ullamcorper a lacus vestibulum. Luctus accumsan tortor posuere ac ut.</p>
             </div>
         </section>
 
@@ -148,5 +157,6 @@
         </section>  
     </main>
     
+</div>
 </body>
 </html>
