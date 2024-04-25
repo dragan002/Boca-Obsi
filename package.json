@@ -4,7 +4,11 @@
     "description": "Add a better quantity input element to forms using pure JavaScript",
     "license": "GNU",
     "repository": "awdltd/quantity-button",
-    "main": "quantity.js",
+    "scripts": {
+        "dev": "parcel index.html",
+        "build": "parcel build index.html"
+    },
+    "main": "./resources/js/main.js",
     "keywords": [
         "input",
         "quantity",
@@ -12,6 +16,10 @@
         "element"
     ],
     "dependencies": {
-        "@ohepworthbell/quantityinput": "^0.2.0"
+        "@ohepworthbell/quantityinput": "^0.2.0",
+        "parcel-bundler": "^1.12.5"
+    },
+    "devDependencies": {
+        "sass": "^1.75.0"
     }
 }

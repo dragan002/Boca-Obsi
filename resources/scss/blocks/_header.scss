@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    min-width: 21em;
+}
+/* === Header === */
+
+.header {
+    display: grid;
+    grid-template-areas: 
+    "menu search logo user cart";
+    margin-top: 1em;
+    align-items: center;
+    /* It is 1em, because I didn't insert mobile icons(signal, battery etc) */
+}
+
+.header__menu {
+    grid-area: menu;
+    justify-self: center;
+}
+
+.header__logo {
+    grid-area: logo;
+    justify-self: center;
+}
+.header__logo img {
+    width: 62px;
+    height: 49px;
+}
+
+.header__nav {
+    display: none;
+    grid-area: nav;
+}
+
+.header__icon-search {
+    grid-area: search;
+}
+
+.header__icon-user {
+    grid-area: user;
+    justify-self: end;
+}
+
+.header__icon-cart {
+    grid-area: cart;
+    justify-self: center;
+}
+
+/* === End ofHeader === */
