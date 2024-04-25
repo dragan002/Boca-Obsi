@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet/style.css">
+    <link href="./node_modules/@ohepworthbell/quantityinput/example/style.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Obsi</title>
@@ -109,13 +109,12 @@
                     <label for="subscribe" class="circle-label">Subscribe(SAVE 20%) | <span>$30</span></label>
                 </div>
             </div>
-
-            <div class="product__quantity">
-                <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
-                <input type="number" id="quantity" name="quantity" value="1" min="1">
-                <button class="quantity-btn" onclick="increaseQuantity()">+</button>
-                <button class="cart-btn">ADD TO CART</button>
-            </div>
+            <form>
+                <fieldset data-quantity>
+                  <legend>Change quantity</legend>
+                </fieldset>
+                <button>ADD TO CART</button>
+              </form>
         </section>
 
         <section class="product__accordions">
@@ -159,5 +158,7 @@
     </main>
     
 </div>
+
+<script src="./node_modules/@ohepworthbell/quantityinput/example/script.js" type="module"></script>
 </body>
 </html>
