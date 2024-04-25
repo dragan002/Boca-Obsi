@@ -1,0 +1,241 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  min-width: 21em;
+}
+
+/* === Header === */
+.header {
+  display: grid;
+  grid-template-areas: "menu search logo user cart";
+  margin-top: 1em;
+  align-items: center;
+  /* It is 1em, because I didn't insert mobile icons(signal, battery etc) */
+}
+
+.header__menu {
+  grid-area: menu;
+  justify-self: center;
+}
+
+.header__logo {
+  grid-area: logo;
+  justify-self: center;
+}
+
+.header__logo img {
+  width: 62px;
+  height: 49px;
+}
+
+.header__nav {
+  display: none;
+  grid-area: nav;
+}
+
+.header__icon-search {
+  grid-area: search;
+}
+
+.header__icon-user {
+  grid-area: user;
+  justify-self: end;
+}
+
+.header__icon-cart {
+  grid-area: cart;
+  justify-self: center;
+}
+
+/* === End ofHeader === */
+.product__category,
+.product__description,
+.product__purchase-options {
+  background-color: #f6f6f5;
+}
+
+.product__category {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.product__category-image img {
+  width: 100%;
+  height: 100%;
+}
+.product__category-arrow {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+  font-size: 10px;
+  color: #4d4d4d;
+}
+.product__category-text span {
+  color: #a9a9a9;
+}
+
+/* section Description */
+.product__description {
+  display: grid;
+  grid-template-columns: calc(10% - 20px) 1fr calc(10% - 20px); /* Adjust the prercentage and pixel values to create space */
+  padding-top: 1em;
+}
+.product__description > * {
+  grid-column: 2;
+}
+.product__description-title, .product__description-text {
+  color: #4d4d4d;
+}
+.product__description-title-main {
+  margin: 0;
+  font-weight: 400;
+  font-size: 28px;
+}
+.product__description-title-sub, .product__description-text {
+  font-size: 14px;
+  font-weight: 200;
+}
+.product__description-icons {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-row-gap: 2em;
+  margin-block: 2em;
+}
+.product__description-icon {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: 10px;
+  align-items: center;
+}
+.product__description-text-icon {
+  font-size: 14px;
+  border-block: 1px solid #9f938b;
+  padding-bottom: 0.3em;
+  color: #9f938b;
+}
+.product__description-icon-image {
+  justify-self: end;
+}
+
+/* ========= Purchase Options====== */
+.product__purchase-options {
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  gap: 1.2em;
+  color: #4d4d4d;
+  font-weight: 200;
+}
+.product__purchase-options > :first-child {
+  grid-row: 2;
+}
+.product__purchase-options > :last-child {
+  grid-row: 3;
+}
+.product__purchase-option {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.product__purchase-option input {
+  accent-color: #9f938b;
+  width: 22px;
+  height: 22px;
+}
+.product__purchase-option span {
+  color: #d35d5d;
+}
+.product__purchase-quantity {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+[data-quantity] {
+  position: relative;
+  width: 100%;
+  max-width: 11rem;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+[data-quantity] legend {
+  display: none;
+}
+
+[data-quantity] input {
+  font-size: 16px;
+  height: 4rem;
+  color: #000000;
+  background: #f6f6f5;
+  border-color: #c5d1d9;
+  padding: 0 4rem;
+  box-shadow: 0 10px 65px -10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: lighter;
+}
+
+[data-quantity] input:focus {
+  outline: none;
+  box-shadow: 0 5px 55px -10px rgba(0, 0, 0, 0.2), 0 0 4px #3fb0ff; /* Allows border radius on focus */
+}
+
+[data-quantity] input[type=number]::-webkit-inner-spin-button,
+[data-quantity] input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+[data-quantity] input[type=number] {
+  -moz-appearance: textfield;
+}
+
+[data-quantity] button {
+  position: absolute;
+  width: 2.8rem;
+  height: 2.8rem;
+  top: 0.6rem;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><path d="M17 25h16M67 25h16M75 17v16" fill="none" stroke="rgb(59,69,66)" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" /></svg>') no-repeat 0 0;
+  background-size: 5.6rem 2.8rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+  border-radius: 1.4rem;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  opacity: 0.5;
+}
+
+[data-quantity] button:active {
+  background-position-y: 1px;
+  box-shadow: inset 0 2px 12px -4px #c5d1d9;
+}
+
+[data-quantity] button:focus {
+  outline: none;
+}
+
+[data-quantity] button:hover {
+  opacity: 1;
+}
+
+[data-quantity] button.sub {
+  left: 0.6rem;
+}
+
+[data-quantity] button.add {
+  right: 0.6rem;
+  background-position-x: -2.8rem;
+}
+
+/*# sourceMappingURL=/style.97209d85.css.map */
