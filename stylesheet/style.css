@@ -143,3 +143,23 @@ body {
     color: #4d4d4d;
     font-weight: 200;
 }
+.product__option input {
+    accent-color: #9f938b;
+    width: 22px;
+    height: 22px;
+}
+.product__option span {
+    color: #d35d5d;
+}
+
+.product__purchase-options {
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    gap: 1.2em;
+}
+.product__purchase-options > :first-child {
+    grid-row: 2;
+}
+.product__purchase-options > :last-child {
+    grid-row: 3;
+}
