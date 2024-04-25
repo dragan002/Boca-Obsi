@@ -7,7 +7,7 @@ body {
   min-width: 21em;
 }
 
-/* === Header === */
+/* Header */
 .header {
   display: grid;
   grid-template-areas: "menu search logo user cart";
@@ -15,42 +15,34 @@ body {
   align-items: center;
   /* It is 1em, because I didn't insert mobile icons(signal, battery etc) */
 }
-
 .header__menu {
   grid-area: menu;
   justify-self: center;
 }
-
 .header__logo {
   grid-area: logo;
   justify-self: center;
 }
-
 .header__logo img {
   width: 62px;
   height: 49px;
 }
-
 .header__nav {
   display: none;
   grid-area: nav;
 }
-
 .header__icon-search {
   grid-area: search;
 }
-
 .header__icon-user {
   grid-area: user;
   justify-self: end;
 }
-
 .header__icon-cart {
   grid-area: cart;
   justify-self: center;
 }
 
-/* === End ofHeader === */
 .product__category,
 .product__description,
 .product__purchase-options {
@@ -179,21 +171,6 @@ body {
   width: 100%;
   box-sizing: border-box;
   font-weight: lighter;
-}
-
-[data-quantity] input:focus {
-  outline: none;
-  box-shadow: 0 5px 55px -10px rgba(0, 0, 0, 0.2), 0 0 4px #3fb0ff; /* Allows border radius on focus */
-}
-
-[data-quantity] input[type=number]::-webkit-inner-spin-button,
-[data-quantity] input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-[data-quantity] input[type=number] {
-  -moz-appearance: textfield;
 }
 
 [data-quantity] button {

@@ -6,48 +6,48 @@ body {
 .container {
     min-width: 21em;
 }
-/* === Header === */
 
+/* Header */
 .header {
     display: grid;
     grid-template-areas: 
-    "menu search logo user cart";
+        "menu search logo user cart";
     margin-top: 1em;
     align-items: center;
+
     /* It is 1em, because I didn't insert mobile icons(signal, battery etc) */
-}
 
-.header__menu {
-    grid-area: menu;
-    justify-self: center;
-}
+    &__menu {
+        grid-area: menu;
+        justify-self: center;
+    }
 
-.header__logo {
-    grid-area: logo;
-    justify-self: center;
-}
-.header__logo img {
-    width: 62px;
-    height: 49px;
-}
+    &__logo {
+        grid-area: logo;
+        justify-self: center;
 
-.header__nav {
-    display: none;
-    grid-area: nav;
-}
+        img {
+            width: 62px;
+            height: 49px;
+        }
+    }
 
-.header__icon-search {
-    grid-area: search;
-}
+    &__nav {
+        display: none;
+        grid-area: nav;
+    }
 
-.header__icon-user {
-    grid-area: user;
-    justify-self: end;
-}
+    &__icon-search {
+        grid-area: search;
+    }
 
-.header__icon-cart {
-    grid-area: cart;
-    justify-self: center;
-}
+    &__icon-user {
+        grid-area: user;
+        justify-self: end;
+    }
 
-/* === End ofHeader === */
+    &__icon-cart {
+        grid-area: cart;
+        justify-self: center;
+    }
+}

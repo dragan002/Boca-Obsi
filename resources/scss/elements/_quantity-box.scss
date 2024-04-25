@@ -25,20 +25,6 @@
     font-weight: lighter;
   }
   
-  [data-quantity] input:focus {
-    outline: none;
-    box-shadow: 0 5px 55px -10px rgba(0, 0, 0, 0.2), 0 0 4px #3fb0ff; /* Allows border radius on focus */
-  }
-  
-  [data-quantity] input[type=number]::-webkit-inner-spin-button,
-  [data-quantity] input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  
-  [data-quantity] input[type=number] {
-    -moz-appearance: textfield;
-  }
   
   [data-quantity] button {
     position: absolute;
