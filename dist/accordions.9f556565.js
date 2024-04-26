@@ -119,7 +119,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"resources/js/accordions.js":[function(require,module,exports) {
 document.addEventListener("DOMContentLoaded", function () {
-  var accordionButtons = document.querySelectorAll(".product__accordion");
+  var accordionButtons = document.querySelectorAll(".product__accordion-button");
   accordionButtons.forEach(function (button) {
     button.addEventListener("click", function () {
       // Toggle the active class on the clicked button

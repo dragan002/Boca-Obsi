@@ -184,7 +184,7 @@ body {
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
-.product__accordion {
+.product__accordion-button {
   background-color: #eee;
   color: #444;
   cursor: pointer;
@@ -195,25 +195,27 @@ body {
   outline: none;
   transition: 0.4s;
 }
+.product__accordion-button .active, .product__accordion-button:hover {
+  background-color: #ccc;
+}
+.product__accordion-button::after {
+  content: "−";
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+  font-size: 27px;
+}
+.product__accordion-button:not(.active)::after {
+  content: "+";
+  font-size: 27px;
+}
 .product__accordion-panel {
   padding: 0 18px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-}
-.product__accordion .active, .product__accordion:hover {
-  background-color: #ccc;
-}
-.product__accordion::after {
-  content: "➖";
-  font-size: 13px;
-  color: #777;
-  float: right;
-  margin-left: 5px;
-}
-.product__accordion:not(.active)::after {
-  content: "➕";
 }
 
 [data-quantity] {
