@@ -184,9 +184,16 @@ body {
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
+.product__accordion {
+  display: grid;
+  grid-template-columns: calc(10% - 20px) 1fr calc(10% - 20px);
+}
 .product__accordion-button {
-  background-color: #eee;
-  color: #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: 2;
+  background: #fff;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -194,13 +201,14 @@ body {
   border: none;
   outline: none;
   transition: 0.4s;
+  font-size: 20px;
+  color: #4d4d4d;
 }
-.product__accordion-button .active, .product__accordion-button:hover {
-  background-color: #ccc;
+.product__accordion-button:nth-child(3) {
+  border-block: 1px solid #9f938b;
 }
 .product__accordion-button::after {
   content: "−";
-  font-size: 13px;
   color: #777;
   float: right;
   margin-left: 5px;
@@ -211,11 +219,14 @@ body {
   font-size: 27px;
 }
 .product__accordion-panel {
+  grid-column: 2;
   padding: 0 18px;
-  background-color: white;
   max-height: 0;
+  font-size: 14px;
+  font-weight: 200;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  color: #4d4d4d;
 }
 
 [data-quantity] {
