@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
   margin: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
@@ -183,7 +184,6 @@ body {
   color: #4d4d4d;
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
 .product__accordion {
   display: grid;
   grid-template-columns: calc(10% - 20px) 1fr calc(10% - 20px);
@@ -195,7 +195,7 @@ body {
   grid-column: 2;
   background: #fff;
   cursor: pointer;
-  padding: 18px;
+  padding: 18px 0 18px 0;
   width: 100%;
   text-align: left;
   border: none;
@@ -220,13 +220,54 @@ body {
 }
 .product__accordion-panel {
   grid-column: 2;
-  padding: 0 18px;
   max-height: 0;
   font-size: 14px;
   font-weight: 200;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   color: #4d4d4d;
+}
+
+.product__gallery {
+  width: 400px;
+  display: flex;
+  overflow-x: hidden;
+}
+.product__gallery-items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 10px;
+  flex: none;
+}
+.product__gallery-items img {
+  width: 100%;
+  filter: grayscale(100%);
+  transition: transform 0.5s;
+}
+.product__gallery-items img:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.product__gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% auto;
+}
+
+#backBtn,
+#nextBtn {
+  width: 50px;
+  cursor: pointer;
+  margin: 40px;
 }
 
 [data-quantity] {

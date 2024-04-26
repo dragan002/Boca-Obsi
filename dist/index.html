@@ -140,8 +140,23 @@
             </div>
         </section>
 
- 
-          
+        <div class="gallery-wrapper">
+            <img src="/back.3bb8d59d.png" id="backBtn" alt="">
+            <section class="product__gallery">
+                <div class="product__gallery-items">
+                    <span><img src="/image-1.890ca441.png" alt=""></span>
+                    <span><img src="/image-2.9cc69a70.png" alt=""></span>
+                    <span><img src="/image-3.901f0aa6.png" alt=""></span>
+                </div>
+                <div class="product__gallery-items">
+                    <span><img src="/image-4.f148731b.png" alt=""></span>
+                    <span><img src="/image-5.82caf309.png" alt=""></span>
+                    <span><img src="/image-6.f8d4692e.png" alt=""></span>
+                </div>
+            </section>
+            <img src="/next.4e42b61f.png" id="nextBtn" alt="">
+        </div>
+        
             
         <!-- <section class="product__cards">
             <h3 class="product__cards-title">YOU MAY ALSO LIKE</h3>
@@ -174,5 +189,28 @@
 <script src="/main.9a19ef5a.js"></script>
 <script src="/accordions.9f556565.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script>// Selecting the scroll container using the correct class selector
+var scrollContainer = document.querySelector('.product__gallery');
+var backBtn = document.getElementById("backBtn");
+var nextBtn = document.getElementById("nextBtn");
+
+// Attaching the event listener to the window object to capture all scroll events
+window.addEventListener("wheel", function (evt) {
+  // Checking if the scroll event occurred within the scroll container
+  if (scrollContainer.contains(evt.target)) {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+    scrollContainer.style.scrollBehaviour = "auto";
+  }
+});
+nextBtn.addEventListener('click', function () {
+  scrollContainer.style.scrollBehaviour = "smooth";
+  scrollContainer.scrollLeft -= 900;
+});
+backBtn.addEventListener('click', function () {
+  scrollContainer.style.scrollBehaviour = "smooth";
+  scrollContainer.scrollLeft += 900;
+});</script>
+
 </body>
 </html>
