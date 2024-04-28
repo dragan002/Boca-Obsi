@@ -1,25 +1,28 @@
 {
-    "name": "@ohepworthbell/quantityinput",
-    "version": "0.2.0",
-    "description": "Add a better quantity input element to forms using pure JavaScript",
+    "name": "swiper-responsive-breakpoints",
+    "version": "1.0.0",
+    "description": "A project with Swiper slider integration and responsive breakpoints",
     "license": "GNU",
-    "repository": "awdltd/quantity-button",
+    "repository": "awdltd/swiper-responsive-breakpoints",
     "scripts": {
-        "dev": "parcel index.html",
-        "build": "parcel build index.html"
+      "dev": "parcel index.html",
+      "build": "parcel build index.html",
+      "start": "serve"
     },
-    "main": "./resources/js/main.js",
+    "main": "index.html",
     "keywords": [
-        "input",
-        "quantity",
-        "form",
-        "element"
+      "swiper",
+      "responsive",
+      "breakpoints"
     ],
     "dependencies": {
-        "@ohepworthbell/quantityinput": "^0.2.0",
-        "parcel-bundler": "^1.12.5"
+      "@ohepworthbell/quantityinput": "^0.2.0",
+      "parcel-bundler": "^1.12.5",
+      "swiper": "^7.0.0" 
     },
     "devDependencies": {
-        "sass": "^1.75.0"
+      "sass": "^1.75.0",
+      "serve": "^11.2.0"
     }
-}
+  }
+  
