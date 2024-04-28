@@ -1,6 +1,7 @@
 .product__accordion {
     display: grid;
     grid-template-columns: calc(10% - 20px) 1fr calc(10% - 20px);
+    grid-area: accordion;
 
     &-button {
         display: flex;

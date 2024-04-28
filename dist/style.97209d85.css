@@ -9,6 +9,12 @@ body {
   min-width: 21em;
 }
 
+@media screen and (min-width: 900px) {
+  .product {
+    display: grid;
+    grid-template-areas: "category description" "accordion ." "swiper swiper";
+  }
+}
 /* Header */
 .header {
   display: grid;
@@ -51,15 +57,36 @@ body {
   background-color: #f6f6f5;
 }
 
-.product__category {
-  display: flex;
-  flex-direction: column-reverse;
+/* section Description */
+.product__description {
+  grid-area: description;
 }
-.product__category-image img {
+
+.product__description,
+.product__accordions,
+.product__cards {
+  display: grid;
+  grid-template-columns: calc(10% - 20px) 1fr calc(10% - 20px); /* Adjust the prercentage and pixel values to create space */
+}
+.product__description > *,
+.product__accordions > *,
+.product__cards > * {
+  grid-column: 2;
+}
+.product__description-image,
+.product__accordions-image,
+.product__cards-image {
+  grid-column: 1/4;
+}
+.product__description-image img,
+.product__accordions-image img,
+.product__cards-image img {
   width: 100%;
   height: 100%;
 }
-.product__category-arrow {
+.product__description-arrow,
+.product__accordions-arrow,
+.product__cards-arrow {
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
@@ -68,22 +95,10 @@ body {
   font-size: 10px;
   color: #4d4d4d;
 }
-.product__category-text span {
+.product__description-arrow-text span,
+.product__accordions-arrow-text span,
+.product__cards-arrow-text span {
   color: #a9a9a9;
-}
-
-/* section Description */
-.product__description,
-.product__accordions,
-.product__cards {
-  display: grid;
-  grid-template-columns: calc(10% - 20px) 1fr calc(10% - 20px); /* Adjust the prercentage and pixel values to create space */
-  padding-top: 1em;
-}
-.product__description > *,
-.product__accordions > *,
-.product__cards > * {
-  grid-column: 2;
 }
 .product__description-title,
 .product__accordions-title,
@@ -187,6 +202,7 @@ body {
 .product__accordion {
   display: grid;
   grid-template-columns: calc(10% - 20px) 1fr calc(10% - 20px);
+  grid-area: accordion;
 }
 .product__accordion-button {
   display: flex;
@@ -231,6 +247,8 @@ body {
 .swiper {
   width: 90%;
   height: 100%;
+  margin-top: 3em;
+  grid-area: swiper;
 }
 
 .swiper-slide {
@@ -247,6 +265,14 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+h2 {
+  text-align: center;
+  color: #4d4d44;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 3em;
 }
 
 [data-quantity] {

@@ -8,6 +8,17 @@ body {
     min-width: 21em;
 }
 
+@media screen and (min-width: 900px) {
+    .product {
+        display: grid;
+        grid-template-areas: 
+        'category description'
+        'accordion .'
+        'swiper swiper'
+        ;
+    }
+}
+
 /* Header */
 .header {
     display: grid;
