@@ -36,16 +36,16 @@ body {
 
     &__nav {
         grid-area: nav;
-        height: 100vh;
-        width: 100%;
-        max-width: 450px;
-        position: fixed;
-        top: 0;
-        right: -450px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 100vh;
+        width: 100%;
+        max-width: 360px;
+        right: -360px;
+        position: fixed;
+        top: 0;
         transition: 0.3s ease-in;
 
         &-list {
@@ -96,6 +96,8 @@ body {
 
         .header__nav {
             display: grid;
+            position: initial;
+            height: initial;
 
             ul {
                 display: flex;
