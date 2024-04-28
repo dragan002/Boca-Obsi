@@ -35,8 +35,36 @@ body {
     }
 
     &__nav {
-        display: none;
         grid-area: nav;
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease-in;
+
+        &-list {
+            list-style:  none;
+        }
+        &-item {
+            a {
+                text-decoration: none;
+                font-size: 14px;
+                color: #4d4d4d;
+            }
+        }
+    }
+    &__nav.is-active {
+        margin-top: 350px;
+        font-size: 45px;
+        right: 0;
+        top: initial;
+        background: cornsilk;
     }
 
     &__icon-search {
@@ -73,16 +101,6 @@ body {
                 display: flex;
                 justify-self: center;
                 gap: 1em;
-
-                li {
-                    list-style: none;
-                    
-                    a {
-                        text-decoration: none;
-                        font-size: 14px;
-                        color: #4d4d4d;
-                    }
-                }
             }
         }
         &__icon {

@@ -5,24 +5,24 @@
     "license": "GNU",
     "repository": "awdltd/swiper-responsive-breakpoints",
     "scripts": {
-      "dev": "parcel index.html",
-      "build": "parcel build index.html",
-      "start": "serve"
+        "dev": "parcel index.html",
+        "build": "parcel build index.html",
+        "start": "serve"
     },
     "main": "index.html",
     "keywords": [
-      "swiper",
-      "responsive",
-      "breakpoints"
+        "swiper",
+        "responsive",
+        "breakpoints"
     ],
     "dependencies": {
-      "@ohepworthbell/quantityinput": "^0.2.0",
-      "parcel-bundler": "^1.12.5",
-      "swiper": "^7.0.0" 
+        "@ohepworthbell/quantityinput": "^0.2.0",
+        "hamburgers": "^1.2.1",
+        "parcel-bundler": "^1.12.5",
+        "swiper": "^7.0.0"
     },
     "devDependencies": {
-      "sass": "^1.75.0",
-      "serve": "^11.2.0"
+        "sass": "^1.75.0",
+        "serve": "^11.2.0"
     }
-  }
-  
+}

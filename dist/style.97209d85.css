@@ -30,8 +30,33 @@ body {
   height: 49px;
 }
 .header__nav {
-  display: none;
   grid-area: nav;
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in;
+}
+.header__nav-list {
+  list-style: none;
+}
+.header__nav-item a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #4d4d4d;
+}
+.header__nav.is-active {
+  margin-top: 350px;
+  font-size: 45px;
+  right: 0;
+  top: initial;
+  background: cornsilk;
 }
 .header__icon-search {
   grid-area: search;
@@ -59,14 +84,6 @@ body {
     display: flex;
     justify-self: center;
     gap: 1em;
-  }
-  .header .header__nav ul li {
-    list-style: none;
-  }
-  .header .header__nav ul li a {
-    text-decoration: none;
-    font-size: 14px;
-    color: #4d4d4d;
   }
   .header__icon-search, .header__icon-user, .header__icon-cart {
     cursor: pointer;
@@ -418,6 +435,12 @@ h2 {
 [data-quantity] button.add {
   right: 0.6rem;
   background-position-x: -2.8rem;
+}
+
+.hamburger-box {
+  height: 10px;
+  width: 20px;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=/style.97209d85.css.map */
