@@ -53,3 +53,57 @@ body {
         justify-self: center;
     }
 }
+
+
+@media screen and (min-width:700px) {
+
+    .header {
+
+        grid-template-areas:
+            "logo nav search user cart";
+
+        &__menu {
+            display: none;
+        }
+
+        .header__nav {
+            display: grid;
+
+            ul {
+                display: flex;
+                justify-self: center;
+                gap: 1em;
+
+                li {
+                    list-style: none;
+                    
+                    a {
+                        text-decoration: none;
+                        font-size: 14px;
+                        color: #4d4d4d;
+                    }
+                }
+            }
+        }
+        &__icon {
+            &-search,
+            &-user,
+            &-cart {
+                cursor: pointer;
+                position: absolute;
+        }
+        
+        &-search {
+            right: 140px;
+        }
+
+        &-user {
+            right: 100px;
+        }
+
+        &-cart {
+            right: 60px;
+        }
+    }
+}
+}
